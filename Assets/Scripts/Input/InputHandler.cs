@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
@@ -12,10 +13,18 @@ public class InputHandler : MonoBehaviour
 
     public bool MouseClicked { get; private set; }
 
-    public bool Attack {  get; private set; }
+    public UnityEvent Attack {  get; private set; }
     private void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Update()
@@ -32,12 +41,9 @@ public class InputHandler : MonoBehaviour
     {
         if (!context.started) return;
         MouseClicked = true;
-    }
 
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        if(!context.started) return;
-        var rayHit = Physics2D.Raycast(_mouseScreenPosition, transform.forward, Camera.main.transform.position.z, LayerMask.GetMask("Enemy"));
-        Debug.Log(!rayHit ? "poza celem" : "no kurwa w koncu");
+        var rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if(!rayHit.collider) return;
+        Attack.Invoke();
     }
 }

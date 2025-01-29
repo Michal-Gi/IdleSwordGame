@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField]
     public List<Drop> drops;
+
+    [SerializeField]
+    public UnityEvent OnDeath;
 
     private float _currentHealth;
 
@@ -19,14 +23,15 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        _currentHealth -= damage;
-        if(_currentHealth < 0)
+        _currentHealth = damage;
+        if(_currentHealth <= 0)
         {
-
+            Die();
         }
     }
 
     public void Die() { 
+        OnDeath.Invoke();
         Destroy(gameObject);
     }
 }

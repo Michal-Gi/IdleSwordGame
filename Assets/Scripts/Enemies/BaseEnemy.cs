@@ -2,18 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class BaseEnemy : MonoBehaviour, IPointerClickHandler
+public class BaseEnemy : MonoBehaviour
 {
     [SerializeField]
     public HealthSystem _healthSystem;
 
     [SerializeField]
-    public UnityEvent OnDeath;
+    public int Defense;
 
-    public void OnPointerClick(PointerEventData eventData)
+
+    private BoxCollider2D _hitbox;
+
+    public void Awake()
     {
-        Debug.Log("clicked");
+        _hitbox = GetComponent<BoxCollider2D>();        
+    }
+
+    private void Update()
+    {
+        if (InputHandler.Instance.MouseClicked)
+        {
+
+        }
     }
 }
