@@ -13,7 +13,7 @@ public class InputHandler : MonoBehaviour
 
     public bool MouseClicked { get; private set; }
 
-    public UnityEvent Attack {  get; private set; }
+    public bool Attack {  get; private set; }
     private void Awake()
     {
         if(Instance == null)
@@ -35,15 +35,15 @@ public class InputHandler : MonoBehaviour
     public void LateUpdate()
     {
         MouseClicked = false;
+        Attack = false;
     }
 
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
         MouseClicked = true;
-
         var rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if(!rayHit.collider) return;
-        Attack.Invoke();
+        Attack = true;
     }
 }

@@ -132,13 +132,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291498854}
+  - component: {fileID: 291498855}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: EnemyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &291498854
 Transform:
   m_ObjectHideFlags: 0
@@ -154,6 +155,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291498855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291498853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e83303f954ab94c8bc7a66d6ac4afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobsToSpawn: []
+  BossesToSpawn: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +496,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1871178003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4994726144456497719, guid: d463e98ae9ba2d0489b4c66c1d8d2bd3, type: 3}
+  m_PrefabInstance: {fileID: 7229004249101366399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abec154e05730c47acee0f1e7bcc7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2301686586427871706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +554,22 @@ PrefabInstance:
     - target: {fileID: 502915795702528004, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+      propertyPath: BaseDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+      propertyPath: BaseAccuracy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+      propertyPath: CurrentEnemy
+      value: 
+      objectReference: {fileID: 1871178003}
+    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+      propertyPath: BaseAttackRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4753632879651826106, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
       propertyPath: m_Name

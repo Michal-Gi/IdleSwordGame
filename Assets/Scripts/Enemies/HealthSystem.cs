@@ -23,7 +23,8 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        _currentHealth = damage;
+        _currentHealth -= damage;
+        Debug.Log($"current health is: {_currentHealth}");
         if(_currentHealth <= 0)
         {
             Die();

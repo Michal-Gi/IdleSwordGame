@@ -16,10 +16,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     public HealthSystem CurrentEnemy;
 
-    public void Awake()
-    {
+    public float currentDamage => BaseDamage;
 
+    public void Update()
+    {
+        if (InputHandler.Instance.Attack)
+        {
+            Attack();
+        }
     }
 
-    public float currentDamage => BaseDamage;
+    public void Attack()
+    {
+        if (CurrentEnemy != null)
+        {
+            CurrentEnemy.TakeDamage(currentDamage);
+        }
+    }
 }
