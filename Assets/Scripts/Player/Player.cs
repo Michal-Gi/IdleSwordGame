@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+    public static BaseEnemy CurrentEnemy { get; set; }
+
     [SerializeField]
     public int BaseDamage;
 
@@ -13,10 +16,19 @@ public class Player : MonoBehaviour
     [SerializeField]
     public float BaseAttackRate;
 
-    [SerializeField]
-    public HealthSystem CurrentEnemy;
 
     public float currentDamage => BaseDamage;
+    
+    public float currentAccuracy => BaseAccuracy;
+
+    public void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void Update()
     {
@@ -28,9 +40,14 @@ public class Player : MonoBehaviour
 
     public void Attack()
     {
-        if (CurrentEnemy != null)
+        CurrentEnemy._healthSystem.TakeDamage(currentDamage);
+    }
+
+    public static void SetEnemy(BaseEnemy enemy)
+    {
+        if (Instance != null)
         {
-            CurrentEnemy.TakeDamage(currentDamage);
+            CurrentEnemy = enemy;
         }
     }
 }

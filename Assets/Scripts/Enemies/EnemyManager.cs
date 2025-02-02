@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    public static EnemyManager Instance { get; private set; }
     [SerializeField]
     public List<GameObject> MobsToSpawn;
 
     [SerializeField]
     public List<GameObject> BossesToSpawn;
+
+    [SerializeField]
+    private Player Player;
 
     private int _currentMobIndex;
 
@@ -17,8 +21,14 @@ public class EnemyManager : MonoBehaviour
 
     public void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        DontDestroyOnLoad(Instance);
         _currentMobIndex = 0;
         _currentEnemy = MobsToSpawn.ElementAt(_currentMobIndex);
+        SpawnEnemy();
     }
 
     public void SpawnEnemy()
@@ -28,7 +38,7 @@ public class EnemyManager : MonoBehaviour
 
     public void StartBossFight()
     {
-        
+        //TODO - add button to despawn enemy and spawn a boss
     }
 
     

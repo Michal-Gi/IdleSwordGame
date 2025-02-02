@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3295524748879841779}
   - component: {fileID: 7116037147941734481}
   m_Layer: 6
-  m_Name: BasicEnemy
+  m_Name: BaseEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.085172676, b: 0.085172676, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,11 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abec154e05730c47acee0f1e7bcc7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 5
   drops: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  DeathAnimationDelay: 1
 --- !u!114 &3295524748879841779
 MonoBehaviour:
   m_ObjectHideFlags: 0

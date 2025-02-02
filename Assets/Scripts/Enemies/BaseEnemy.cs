@@ -12,19 +12,8 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField]
     public int Defense;
 
-
-    private BoxCollider2D _hitbox;
-
     public void Awake()
     {
-        _hitbox = GetComponent<BoxCollider2D>();        
-    }
-
-    private void Update()
-    {
-        if (InputHandler.Instance.MouseClicked)
-        {
-
-        }
+        Player.SetEnemy(this);
     }
 }
