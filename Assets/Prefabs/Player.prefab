@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7632618017996663643}
   - component: {fileID: 2702353204410898625}
   - component: {fileID: 6436107016174415145}
+  - component: {fileID: 1986738264591303073}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -98,10 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67311c78cb5e0be40b185e6f13d32ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseDamage: 0
-  BaseAccuracy: 0
-  BaseAttackRate: 0
-  CurrentEnemy: {fileID: 0}
+  BaseDamage: 1
+  BaseAccuracy: 1
+  BaseAttackRate: 1
 --- !u!61 &6436107016174415145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +147,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1986738264591303073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753632879651826106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b8894a2146b048889dd88180d8711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

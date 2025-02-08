@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gear : MonoBehaviour
+[CreateAssetMenu]
+public class Gear : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    public string Name;
+    [SerializeField]
+    public float Damage;
+    [SerializeField]
+    public float Accuracy;
+    [SerializeField]
+    public GearType GearType;
 }

@@ -509,22 +509,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
-      propertyPath: BaseDamage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
-      propertyPath: BaseAccuracy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
-      propertyPath: CurrentEnemy
+    - target: {fileID: 1986738264591303073, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+      propertyPath: Weapon
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2702353204410898625, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
-      propertyPath: BaseAttackRate
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: Inventory
+      value: 
+      objectReference: {fileID: 2301686586427871707}
     - target: {fileID: 4753632879651826106, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -534,6 +526,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+--- !u!114 &2301686586427871707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1986738264591303073, guid: 3a684cd036ef395479095209d9a514a5, type: 3}
+  m_PrefabInstance: {fileID: 2301686586427871706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b8894a2146b048889dd88180d8711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4999401873722562800
 PrefabInstance:
   m_ObjectHideFlags: 0
