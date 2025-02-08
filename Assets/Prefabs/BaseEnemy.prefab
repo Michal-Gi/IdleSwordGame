@@ -104,7 +104,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  DeathAnimationDelay: 1
+  DeathAnimationDelay: 0.5
 --- !u!114 &3295524748879841779
 MonoBehaviour:
   m_ObjectHideFlags: 0

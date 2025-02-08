@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
 
     public void ChangeEquipment(Gear equipment)
     {
+        Debug.Log("inventory changed");
         switch (equipment.GearType)
         {
             case GearType.Weapon: Weapon = equipment; break;

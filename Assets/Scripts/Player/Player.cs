@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
 
     public void UpdateCurrentDamage()
     {
+        Debug.Log("Damage updated");
         currentDamage = BaseDamage;
         currentDamage += Inventory.Weapon == null ? 0 : Inventory.Weapon.Damage;
         currentDamage += Inventory.Armor == null ? 0 : Inventory.Armor.Damage;
