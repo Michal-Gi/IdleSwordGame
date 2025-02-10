@@ -34,17 +34,9 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Update()
+    public void Attack(BaseEnemy enemy)
     {
-        if (InputHandler.Instance.Attack)
-        {
-            Attack();
-        }
-    }
-
-    public void Attack()
-    {
-        CurrentEnemy._healthSystem.TakeDamage(currentDamage);
+        enemy._healthSystem.TakeDamage(currentDamage);
     }
 
     public static void SetEnemy(BaseEnemy enemy)
@@ -54,7 +46,9 @@ public class Player : MonoBehaviour
 
     public void UpdateCurrentDamage()
     {
+#if UNITY_EDITOR
         Debug.Log("Damage updated");
+#endif
         currentDamage = BaseDamage;
         currentDamage += Inventory.Weapon == null ? 0 : Inventory.Weapon.Damage;
         currentDamage += Inventory.Armor == null ? 0 : Inventory.Armor.Damage;

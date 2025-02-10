@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class Gear : ScriptableObject
+[RequireComponent(typeof(BoxCollider2D))]
+public class Gear : Item
 {
     [SerializeField]
-    public string Name;
-    [SerializeField]
-    public float Damage;
-    [SerializeField]
-    public float Accuracy;
-    [SerializeField]
-    public GearType GearType;
+    public GearData GearData;
+
+
 }

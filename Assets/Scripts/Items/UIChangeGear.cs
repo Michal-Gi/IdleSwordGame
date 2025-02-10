@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class UIChangeGear : MonoBehaviour
 {
     [SerializeField]
-    public Gear Gear;
+    public GearData Gear;
     
-    public UnityEvent<Gear> OnGearChange;
+    public UnityEvent<GearData> OnGearChange;
 
     private void Awake()
     {

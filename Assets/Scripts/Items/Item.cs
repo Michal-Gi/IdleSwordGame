@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LootItem
+public class Item : MonoBehaviour
 {
     [SerializeField]
     public string Name;
 
-    [SerializeField]
-    public Sprite Sprite;
+    public void DestroyOnClicked()
+    {
+        Destroy(gameObject);
+    }
+
 }

@@ -9,7 +9,7 @@ public class HealthSystem : MonoBehaviour
     public float Health;
 
     [SerializeField]
-    public List<Drop> drops;
+    public List<GameObject> drops;
 
     [SerializeField]
     public UnityEvent OnDeath;
@@ -42,6 +42,10 @@ public class HealthSystem : MonoBehaviour
         OnDeath.Invoke();
         GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(DelayRespawn());
+        foreach(var drop in drops)
+        {
+            Instantiate(drop, new Vector3(transform.position.x + 2, transform.position.y + 2, transform.position.z), Quaternion.Euler(0,0,0));
+        }
     }
 
     IEnumerator DelayRespawn()

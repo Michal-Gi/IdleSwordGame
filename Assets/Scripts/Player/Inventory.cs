@@ -6,29 +6,31 @@ using UnityEngine.Events;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    public Gear Weapon;
+    public GearData Weapon;
     [SerializeField]
-    public Gear Armor;
+    public GearData Armor;
     [SerializeField]
-    public Gear Ring;
+    public GearData Ring;
     [SerializeField]
-    public Gear Necklace;
+    public GearData Necklace;
     [SerializeField]
-    public Gear Helmet;
+    public GearData Helmet;
     [SerializeField]
-    public Gear Pants;
+    public GearData Pants;
     [SerializeField]
-    public Gear Gloves;
+    public GearData Gloves;
     [SerializeField]
-    public Gear Boots;
+    public GearData Boots;
     [SerializeField]
-    public Gear Cape;
+    public GearData Cape;
 
     public UnityEvent OnEquipmentChanged;
 
-    public void ChangeEquipment(Gear equipment)
+    public void ChangeEquipment(GearData equipment)
     {
+#if UNITY_EDITOR
         Debug.Log("inventory changed");
+#endif
         switch (equipment.GearType)
         {
             case GearType.Weapon: Weapon = equipment; break;
@@ -43,5 +45,16 @@ public class Inventory : MonoBehaviour
             default: break;
         };
         OnEquipmentChanged?.Invoke();
+    }
+
+    public void PickItem(GameObject item) {
+        if (item == null) return;
+        if (item.gameObject.GetComponent<Gear>() != null)
+        {
+            ChangeEquipment(item.GetComponent<Gear>().GearData);
+            item.gameObject.GetComponent<Gear>().DestroyOnClicked();
+            return;
+        }
+        //TODO: Add loot logic
     }
 }
