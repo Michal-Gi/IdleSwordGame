@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb877c56bb6702478d4bb31bd747623, type: 3}
   m_Name: StrawSword
   m_EditorClassIdentifier: 
-  Name: 
+  Name: StrawSword
   Damage: 0.5
   Accuracy: 0
   GearType: 0

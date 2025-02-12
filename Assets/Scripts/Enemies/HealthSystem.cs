@@ -40,6 +40,7 @@ public class HealthSystem : MonoBehaviour
 
     public void Die() { 
         OnDeath.Invoke();
+        Player.Instance.ReceiveEXP(GetComponent<BaseEnemy>().EXP);
         GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(DelayRespawn());
         foreach(var drop in drops)

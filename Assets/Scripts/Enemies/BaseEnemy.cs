@@ -12,8 +12,14 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField]
     public int Defense;
 
-    public void Awake()
-    {
-        Player.SetEnemy(this);
+    [SerializeField]
+    public int Armor;
+
+    [SerializeField]
+    public int EXP;
+
+    public void GetAttacked(float damage) {
+        if(damage < Armor) { damage = Armor; }
+        _healthSystem.TakeDamage(damage - Armor);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
-    public static BaseEnemy CurrentEnemy { get; set; }
 
     [SerializeField]
     public int BaseDamage;
@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
 
     public float currentAccuracy => BaseAccuracy;
 
+    public int level;
+
+    public int expToNextLevel;
+
+    public int currentEXP;
+
     public void Awake()
     {
         if (Instance == null)
@@ -32,16 +38,32 @@ public class Player : MonoBehaviour
         }
         currentDamage = BaseDamage;
         DontDestroyOnLoad(gameObject);
+        level = 1;
+        expToNextLevel = 10;
+        currentEXP = 0;
+    }
+
+    public void ReceiveEXP(int amount)
+    {
+        currentEXP += amount;
+        if (currentEXP < expToNextLevel) { return; }
+        level++;
+#if UNITY_EDITOR
+        Debug.Log($"level up! your level is {level}");
+#endif
+        currentEXP = expToNextLevel - currentEXP;
+        if (level < 5)
+        {
+            expToNextLevel *= 2;
+            return;
+        }
+
+        expToNextLevel = (int)Math.Round(expToNextLevel * 1.1f);
     }
 
     public void Attack(BaseEnemy enemy)
     {
         enemy._healthSystem.TakeDamage(currentDamage);
-    }
-
-    public static void SetEnemy(BaseEnemy enemy)
-    {
-        CurrentEnemy = enemy;
     }
 
     public void UpdateCurrentDamage()

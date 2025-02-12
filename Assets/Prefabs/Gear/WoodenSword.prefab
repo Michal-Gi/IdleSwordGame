@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6424906555814885745}
   - component: {fileID: 2967713499033437244}
   m_Layer: 0
-  m_Name: StrawSword
+  m_Name: WoodenSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9245283, g: 0.72979057, b: 0.056692798, a: 1}
+  m_Color: {r: 0.6132076, g: 0.21129526, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fff576856ee046bd6f0f7b9efc745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: StrawSword
+  Name: WoodenSword
   TimeToDie: 3
-  GearData: {fileID: 11400000, guid: 8e863f5594bc7cf45bb68b4b7b6d2c5d, type: 2}
+  GearData: {fileID: 11400000, guid: 08fc85ee689d19046ae6dd8e936c90f7, type: 2}

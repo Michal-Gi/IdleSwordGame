@@ -27,13 +27,26 @@ public class EnemyManager : MonoBehaviour
         }
         DontDestroyOnLoad(Instance);
         _currentMobIndex = 0;
-        _currentEnemy = MobsToSpawn.ElementAt(_currentMobIndex);
+        _currentEnemy = MobsToSpawn[_currentMobIndex];
         SpawnEnemy();
     }
 
     public void SpawnEnemy()
     {
         Instantiate(_currentEnemy, gameObject.transform.position, Quaternion.Euler(0,0,0));
+    }
+
+    public void SetNextEnemy() {
+        if (_currentMobIndex >= MobsToSpawn.Count-1) { return; }
+        _currentMobIndex++;
+        _currentEnemy = MobsToSpawn[ _currentMobIndex ];
+    }
+
+    public void SetPreviousEnemy()
+    {
+        if (_currentMobIndex <= 0) { return; }
+        _currentMobIndex--;
+        _currentEnemy = MobsToSpawn[_currentMobIndex];
     }
 
     public void StartBossFight()

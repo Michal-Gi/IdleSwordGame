@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 4312809315447589612}
   Defense: 0
+  Armor: 0
+  EXP: 1
 --- !u!114 &4312809315447589612
 MonoBehaviour:
   m_ObjectHideFlags: 0

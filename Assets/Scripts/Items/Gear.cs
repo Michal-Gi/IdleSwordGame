@@ -7,6 +7,4 @@ public class Gear : Item
 {
     [SerializeField]
     public GearData GearData;
-
-
 }
