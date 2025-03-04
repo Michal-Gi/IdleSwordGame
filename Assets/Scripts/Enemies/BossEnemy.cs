@@ -6,7 +6,8 @@ public class BossEnemy : BaseEnemy
 {
     [SerializeField]
     public float TimeToBeat;
-    public float TimeLeft;
+
+    private float TimeLeft;
 
     private void Awake()
     {
@@ -16,8 +17,8 @@ public class BossEnemy : BaseEnemy
     private void FixedUpdate()
     {
         TimeLeft -= Time.deltaTime;
-        if( TimeLeft <= 0 ) { 
-            //TODO: change boss without receiving rewards
+        if( TimeLeft <= 0 ) {
+            EnemyManager.Instance.ChangeEnemy();
         }
     }
 

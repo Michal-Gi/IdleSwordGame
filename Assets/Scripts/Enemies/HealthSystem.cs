@@ -40,6 +40,10 @@ public class HealthSystem : MonoBehaviour
 
     public void Die() { 
         OnDeath.Invoke();
+        if (GetComponent<BossEnemy>())
+        {
+            EnemyManager.Instance.SetNextBoss();
+        }
         Player.Instance.ReceiveEXP(GetComponent<BaseEnemy>().EXP);
         GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(DelayRespawn());

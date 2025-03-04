@@ -118,7 +118,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 4994726144456497719}
-  Defense: 0
+  Armor: 0
+  EXP: 0
+  DamageResistancyMultiplayers:
+    Resistances:
+    - Value: 0
+      DamageType: 0
 --- !u!61 &7116037147941734481
 BoxCollider2D:
   m_ObjectHideFlags: 0

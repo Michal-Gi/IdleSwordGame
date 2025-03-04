@@ -13,4 +13,6 @@ public class GearData : ScriptableObject
     public float Accuracy;
     [SerializeField]
     public GearType GearType;
+    [SerializeField]
+    public DamageType DamageType;
 }

@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
     public GearData Cape;
 
     public UnityEvent OnEquipmentChanged;
+    public UnityEvent OnWeaponChanged;
 
     public void ChangeEquipment(GearData equipment)
     {
@@ -33,7 +34,7 @@ public class Inventory : MonoBehaviour
 #endif
         switch (equipment.GearType)
         {
-            case GearType.Weapon: Weapon = equipment; break;
+            case GearType.Weapon: { Weapon = equipment; OnWeaponChanged?.Invoke(); break; }
             case GearType.Armor: Armor = equipment; break;
             case GearType.Ring: Ring = equipment; break;
             case GearType.Necklace: Necklace = equipment; break;

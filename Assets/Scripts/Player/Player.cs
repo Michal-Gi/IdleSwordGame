@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Inventory))]
@@ -19,6 +20,11 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     public Inventory Inventory;
+
+    [SerializeField]
+    public GameObject AvailableSkillPointsCounter;
+
+    public int SkillPoints;
 
     public float currentDamage;
 
@@ -41,6 +47,8 @@ public class Player : MonoBehaviour
         level = 1;
         expToNextLevel = 10;
         currentEXP = 0;
+        SkillPoints = 0;
+        AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
     }
 
     public void ReceiveEXP(int amount)
@@ -51,19 +59,24 @@ public class Player : MonoBehaviour
 #if UNITY_EDITOR
         Debug.Log($"level up! your level is {level}");
 #endif
-        currentEXP = expToNextLevel - currentEXP;
+        SkillPoints++;
+        BaseDamage++;
+        AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
+        currentEXP -= expToNextLevel;
         if (level < 5)
         {
             expToNextLevel *= 2;
+            ReceiveEXP(0);
             return;
         }
 
         expToNextLevel = (int)Math.Round(expToNextLevel * 1.1f);
+        ReceiveEXP(0);
     }
 
     public void Attack(BaseEnemy enemy)
     {
-        enemy._healthSystem.TakeDamage(currentDamage);
+        enemy.GetAttacked(currentDamage, DamageType.True);
     }
 
     public void UpdateCurrentDamage()

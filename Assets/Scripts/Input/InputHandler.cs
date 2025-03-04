@@ -47,7 +47,8 @@ public class InputHandler : MonoBehaviour
         var hitObject = rayHit.collider.gameObject;
         if (hitObject.GetComponent<BaseEnemy>() != null)
         {
-            var enemyToHit = hitObject.GetComponent<BaseEnemy>();
+            BaseEnemy enemyToHit;
+            enemyToHit = hitObject.GetComponent<BaseEnemy>();
             Player.Instance.Attack(enemyToHit);
             return;
         }

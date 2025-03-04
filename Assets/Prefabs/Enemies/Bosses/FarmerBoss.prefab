@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2806988551330901914}
   - component: {fileID: 4067382051784454254}
   - component: {fileID: 4994726144456497719}
-  - component: {fileID: 3295524748879841779}
   - component: {fileID: 7116037147941734481}
+  - component: {fileID: 5052627896517488064}
   m_Layer: 6
   m_Name: FarmerBoss
   m_TagString: Untagged
@@ -105,22 +105,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   DeathAnimationDelay: 0.5
---- !u!114 &3295524748879841779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888878129711057133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6eecb68154c5449bffbc9e170f8d16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthSystem: {fileID: 4994726144456497719}
-  Defense: 0
-  Armor: 0
-  EXP: 0
 --- !u!61 &7116037147941734481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +150,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5052627896517488064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888878129711057133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9facb6849f6bf4c8db0759075b1299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSystem: {fileID: 4994726144456497719}
+  Defense: 1
+  Armor: 1
+  EXP: 20
+  TimeToBeat: 30
