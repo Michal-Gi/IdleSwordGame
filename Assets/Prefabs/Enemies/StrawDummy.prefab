@@ -103,11 +103,8 @@ MonoBehaviour:
   Armor: 0
   EXP: 1
   ResistanceDict:
-    Resistances:
-    - Value: 0
-      DamageType: 0
-    - Value: 0
-      DamageType: 0
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &4312809315447589612
 MonoBehaviour:
   m_ObjectHideFlags: 0
