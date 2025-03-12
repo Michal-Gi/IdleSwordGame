@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Inventory))]
 public class Player : MonoBehaviour
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     public GameObject AvailableSkillPointsCounter;
+
+    public UnityEvent OnLevelUp;
 
     public int SkillPoints;
 
@@ -62,6 +65,7 @@ public class Player : MonoBehaviour
         SkillPoints++;
         BaseDamage++;
         AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
+        OnLevelUp.Invoke();
         currentEXP -= expToNextLevel;
         if (level < 5)
         {
