@@ -53,7 +53,7 @@ public class HealthSystem : MonoBehaviour
         StartCoroutine(DelayRespawn());
         foreach(var drop in drops)
         {
-            var dropItem = Instantiate(drop, new Vector3(transform.position.x + 2, transform.position.y + 2, transform.position.z), Quaternion.Euler(0,0,0));
+            var dropItem = Instantiate(drop, transform.position, Quaternion.Euler(0,0,0));
             dropItem.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1.25f, 1.25f)*100, 250));
         }
     }
