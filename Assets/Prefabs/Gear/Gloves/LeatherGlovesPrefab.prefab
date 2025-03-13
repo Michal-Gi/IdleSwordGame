@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2035472427383590121}
   - component: {fileID: 6424906555814885745}
   - component: {fileID: 2967713499033437244}
-  - component: {fileID: 1637600190742289889}
+  - component: {fileID: -5721647361937931870}
   m_Layer: 0
-  m_Name: WoodenSword
+  m_Name: LeatherGlovesPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6132076, g: 0.21129526, b: 0, a: 1}
+  m_Color: {r: 0.9245283, g: 0.72979057, b: 0.056692798, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 119
@@ -144,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fff576856ee046bd6f0f7b9efc745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: WoodenSword
+  Name: 
   TimeToDie: 3
-  GearData: {fileID: 11400000, guid: 08fc85ee689d19046ae6dd8e936c90f7, type: 2}
---- !u!50 &1637600190742289889
+  GearData: {fileID: 11400000, guid: 211e0e6de15ecf94e944f7be199f39b3, type: 2}
+--- !u!50 &-5721647361937931870
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

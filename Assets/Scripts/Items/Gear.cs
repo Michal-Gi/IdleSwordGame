@@ -7,4 +7,9 @@ public class Gear : Item
 {
     [SerializeField]
     public GearData GearData;
+
+    private void Awake()
+    {
+        Name = GearData.Name;
+    }
 }
