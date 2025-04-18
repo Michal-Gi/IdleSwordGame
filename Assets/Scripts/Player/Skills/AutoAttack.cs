@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAttack : BaseSkill
 {
-    private void Start()
+    private void Awake()
     {
         DamageType = Player.Instance.Inventory.Weapon == null? 
             DamageType.Bludgeoning :

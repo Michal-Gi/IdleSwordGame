@@ -11,8 +11,7 @@ public class BaseSkill : MonoBehaviour
     [SerializeField]
     public float Damage;
 
-    [SerializeField]
-    public DamageType DamageType;
+    public DamageType DamageType {  get; protected set; }
 
     [SerializeField]
     public float CoolDown;
