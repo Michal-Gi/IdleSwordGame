@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BaseSkill : MonoBehaviour
 {
@@ -14,6 +17,16 @@ public class BaseSkill : MonoBehaviour
     [SerializeField]
     public float CoolDown;
 
+    [SerializeField]
+    public int Level;
+
+    [SerializeField]
+    public TextMeshProUGUI SkillDamageValuesDisplay;
+
+    public UnityEvent<int> OnSkillLevelUp;
+
+    public UnityEvent<string> OnSkillLevelUpTextUIChange;
+
     private float TimeLeft;
 
     public void Upgrade(int timesToUpgrade)
@@ -21,9 +34,18 @@ public class BaseSkill : MonoBehaviour
         if (Player.Instance.SkillPoints < timesToUpgrade) { return; }
         for (int i = 0; i < timesToUpgrade; i++)
         {
-            CoolDown -= Math.Max(1, CoolDown - 0.1f);
+            CoolDown = Math.Max(1, CoolDown - 0.1f);
             Damage += Math.Max(1, Damage * 1.1f);
+            Level++;
+            Player.Instance.SkillPoints--;
+            OnSkillLevelUp.Invoke(Level);
+            //OnSkillLevelUpTextUIChange.Invoke(GetDamageForUI());
+            SkillDamageValuesDisplay.text = GetDamageForUI();
         }
+    }
+
+    public string GetDamageForUI() {
+        return $"{Damage} -> {Math.Max(1, Damage * 1.1f)}";
     }
 
     private void Awake()

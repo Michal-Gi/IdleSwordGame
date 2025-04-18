@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     public GameObject AvailableSkillPointsCounter;
 
+    [SerializeField]
+    public SkillList SkillList;
+
     public UnityEvent OnLevelUp;
 
     public int SkillPoints;
@@ -51,7 +54,7 @@ public class Player : MonoBehaviour
         expToNextLevel = 10;
         currentEXP = 0;
         SkillPoints = 0;
-        AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
+        UpdateSkillPointsAmountUI();
     }
 
     public void ReceiveEXP(int amount)
@@ -64,7 +67,7 @@ public class Player : MonoBehaviour
 #endif
         SkillPoints++;
         BaseDamage++;
-        AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
+        UpdateSkillPointsAmountUI();
         OnLevelUp.Invoke();
         currentEXP -= expToNextLevel;
         if (level < 5)
@@ -98,5 +101,10 @@ public class Player : MonoBehaviour
         currentDamage += Inventory.Gloves == null ? 0 : Inventory.Gloves.Damage;
         currentDamage += Inventory.Boots == null ? 0 : Inventory.Boots.Damage;
         currentDamage += Inventory.Cape == null ? 0 : Inventory.Cape.Damage;
+    }
+
+    public void UpdateSkillPointsAmountUI()
+    {
+        AvailableSkillPointsCounter.GetComponent<TextMeshProUGUI>().text = $"{SkillPoints}";
     }
 }

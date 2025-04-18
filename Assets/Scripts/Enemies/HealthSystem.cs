@@ -33,9 +33,6 @@ public class HealthSystem : MonoBehaviour
         if (_currentHealth <= 0) { return; }
         _currentHealth -= damage;
         OnDamageReceived.Invoke();
-#if UNITY_EDITOR
-        Debug.Log($"current health is: {_currentHealth}");
-#endif
         if(_currentHealth <= 0)
         {
             Die();

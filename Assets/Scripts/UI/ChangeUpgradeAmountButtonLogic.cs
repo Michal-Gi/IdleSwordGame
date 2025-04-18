@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpgradeButtonLogic : MonoBehaviour
+public class ChangeUpgradeAmountButtonLogic : MonoBehaviour
 {
     private Button button;
 
@@ -19,10 +19,19 @@ public class UpgradeButtonLogic : MonoBehaviour
     }
 
 
-    public void wakeUp()
+    public void WakeUp()
     {
         if (Player.Instance.SkillPoints < amount) { return; }
         button.enabled = true;
         button.image.color = button.colors.normalColor;
     }
+
+    public void PutToSleep()
+    {
+        if (Player.Instance.SkillPoints >= amount) { return; }
+        button.image.color = button.colors.disabledColor;
+        button.enabled = false;
+    }
+
+
 }

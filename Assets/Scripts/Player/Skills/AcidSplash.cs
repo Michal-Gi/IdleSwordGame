@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AcidSplash : BaseSkill
 {
-    void Start()
+    void Awake()
     {
         DamageType = DamageType.Acid;
     }
