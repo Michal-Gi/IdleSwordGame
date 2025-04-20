@@ -22,6 +22,9 @@ public class BaseSkill : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI SkillDamageValuesDisplay;
 
+    [SerializeField]
+    public TextMeshProUGUI SkillLevelDisplay;
+
     public UnityEvent<int> OnSkillLevelUp;
 
     public UnityEvent<string> OnSkillLevelUpTextUIChange;
@@ -40,6 +43,7 @@ public class BaseSkill : MonoBehaviour
             OnSkillLevelUp.Invoke(Level);
             //OnSkillLevelUpTextUIChange.Invoke(GetDamageForUI());
             SkillDamageValuesDisplay.text = GetDamageForUI();
+            SkillLevelDisplay.text = $"Lv. {Level}";
         }
     }
 

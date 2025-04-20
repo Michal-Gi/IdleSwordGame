@@ -574,9 +574,9 @@ MonoBehaviour:
   _healthSystem: {fileID: 4994726144456497719}
   Armor: 0
   EXP: 4
-  BludgeoningResistance: 1
+  BludgeoningResistance: 0.25
   PiercingResistance: 0
-  SlashingResistance: 1
+  SlashingResistance: 0.25
   FireResistance: 0
   ColdResistance: 0
   NecroticResistance: 0

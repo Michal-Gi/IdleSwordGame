@@ -629,7 +629,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4159,7 +4159,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4972,7 +4972,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6836,7 +6836,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6970,7 +6970,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10320,6 +10320,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 640210594}
+  SkillLevelDisplay: {fileID: 321811486}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10354,6 +10355,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 1228319623}
+  SkillLevelDisplay: {fileID: 91014000}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10388,6 +10390,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 458089234}
+  SkillLevelDisplay: {fileID: 1028248784}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10410,6 +10413,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 1936616540}
+  SkillLevelDisplay: {fileID: 1398537983}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10432,6 +10436,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 1490725886}
+  SkillLevelDisplay: {fileID: 567156262}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10454,6 +10459,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 310008527}
+  SkillLevelDisplay: {fileID: 1430647586}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []
@@ -10476,6 +10482,7 @@ MonoBehaviour:
   CoolDown: 3
   Level: 0
   SkillDamageValuesDisplay: {fileID: 336097451}
+  SkillLevelDisplay: {fileID: 722076197}
   OnSkillLevelUp:
     m_PersistentCalls:
       m_Calls: []

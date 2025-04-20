@@ -572,11 +572,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 4994726144456497719}
-  Armor: 1
+  Armor: 0
   EXP: 8
-  BludgeoningResistance: 2
+  BludgeoningResistance: 0.5
   PiercingResistance: 0
-  SlashingResistance: 2
+  SlashingResistance: 0.5
   FireResistance: 0
   ColdResistance: 0
   NecroticResistance: 0
