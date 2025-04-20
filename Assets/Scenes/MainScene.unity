@@ -8224,9 +8224,9 @@ RectTransform:
   - {fileID: 2027620801}
   m_Father: {fileID: 245026071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 185.74008, y: -21.2978}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 185.74008, y: -273.2978}
   m_SizeDelta: {x: 335, y: 234.4703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1700298737
@@ -10540,7 +10540,7 @@ PrefabInstance:
       objectReference: {fileID: 4623096}
     - target: {fileID: 7907380006281628794, guid: 801e45166ef34b64b8d7fab85b5ec64f, type: 3}
       propertyPath: MobsToSpawn.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7907380006281628794, guid: 801e45166ef34b64b8d7fab85b5ec64f, type: 3}
       propertyPath: BossesToSpawn.Array.size
@@ -10554,6 +10554,14 @@ PrefabInstance:
       propertyPath: MobsToSpawn.Array.data[1]
       value: 
       objectReference: {fileID: 8455468945552357108, guid: 31fa1887a8af7744a9c97d0c28d0579b, type: 3}
+    - target: {fileID: 7907380006281628794, guid: 801e45166ef34b64b8d7fab85b5ec64f, type: 3}
+      propertyPath: MobsToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 5888878129711057133, guid: d0e2105e269b22348a11373ec5bf244f, type: 3}
+    - target: {fileID: 7907380006281628794, guid: 801e45166ef34b64b8d7fab85b5ec64f, type: 3}
+      propertyPath: MobsToSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 5888878129711057133, guid: 4b1df3f6c5e2e954e96848f24156f7b4, type: 3}
     - target: {fileID: 7907380006281628794, guid: 801e45166ef34b64b8d7fab85b5ec64f, type: 3}
       propertyPath: BossesToSpawn.Array.data[0]
       value: 

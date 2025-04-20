@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy name
+  m_text: Armored Straw Dummy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 3295524748879841779}
   - component: {fileID: 7116037147941734481}
   m_Layer: 6
-  m_Name: BaseEnemy
+  m_Name: ArmoredStrawDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abec154e05730c47acee0f1e7bcc7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 10
   drops: []
   OnDeath:
     m_PersistentCalls:
@@ -573,10 +573,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 4994726144456497719}
   Armor: 0
-  EXP: 0
-  BludgeoningResistance: 0
+  EXP: 4
+  BludgeoningResistance: 1
   PiercingResistance: 0
-  SlashingResistance: 0
+  SlashingResistance: 1
   FireResistance: 0
   ColdResistance: 0
   NecroticResistance: 0
@@ -751,4 +751,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 1347650210981948256}
   EnemyNameField: {fileID: 6076125906137365531}
-  EnemyName: Base enemy
+  EnemyName: Armored Straw Dummy
